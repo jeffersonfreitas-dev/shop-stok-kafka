@@ -12,7 +12,7 @@ public class ShopItem {
     @GeneratedValue(strategy	=	GenerationType.IDENTITY)
     private	Long	id;
 
-    @Column(name	=	"product_identifier")
+    @Column(name = "product_identifier")
     private	String	productIdentifier;
 
     private	Integer	amount;
@@ -20,7 +20,7 @@ public class ShopItem {
     private	Float	price;
 
     @ManyToOne
-    @JoinColumn(name	=	"shop_id")
+    @JoinColumn(name = "shop_id")
     private	Shop	shop;
 
     public	static	ShopItem	convert(ShopItemDTO shopItemDTO) {
